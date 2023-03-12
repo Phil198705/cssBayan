@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+body{
+    background-color: rgb(98, 93, 137);
+}
+
+h1{
+    font-size: 300%;
+    margin: 70px auto 10px;
+    text-align: center;
+}
+
+.accordion-container{
+    width: 60%;
+    height: auto;
+    padding: 30px;
+    margin: 100px auto;
+    background-color: rgb(65, 193, 153);
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.accordion-input{
+    display: none;
+}
+
+.accordion-block{
+    background-color: rgb(65, 193, 153); 
+    width: 100%;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+.accordion-label{
+    cursor: pointer;
+    font-size: 200%;
+    font-weight: bold;
+    display: flex;
+    justify-content:space-between;
+    padding: 10px;
+    margin-bottom: 20px;
+    color: rgb(228, 237, 46);
+}
+
+.cross{
+    display: inline-block;
+    scale: 0;
+    font-weight: 900;
+}
+
+.accordion-mem1{background-image: url(img/mem1.jpg);}
+.accordion-mem2{background-image: url(img/mem2.jpg);}
+.accordion-mem3{background-image: url(img/mem3.jpg);}
+.accordion-mem4{background-image: url(img/mem4.jpg);}
+
+.mem{
+    width: 30%;
+    height: 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 0 auto;
+}
+
+.accordion-input:checked + .accordion-label{
+    color: rgb(0, 0, 0);
+}
+
+.accordion-input:checked + .accordion-label .cross{
+    transform: rotate(45deg);
+    transition: 1s;
+}
+
+.accordion-input:checked + .accordion-label + .mem{
+    height: 200px;
+    transition: 1s;
+}
+
+.accordion-container:hover .accordion-label{
+    color: rgb(0, 0, 0);
+    transition: 1s;
+} 
+
+.accordion-block1:hover .accordion-mem1{
+    height: 200px;
+    transition: 1s;
+}
+
+.accordion-block2:hover .accordion-mem2{
+    height: 200px;
+    transition: 1s;
+}
+
+.accordion-block3:hover .accordion-mem3{
+    height: 200px;
+    transition: 1s;
+}
+
+.accordion-block4:hover .accordion-mem4{
+    height: 200px;
+    transition: 1s;
+}
+
+.accordion-container:hover .cross{
+    scale: 1;
+    transition: 1s;
+}
+
+.accordion-block1:hover .cross{
+    transform: rotate(45deg);
+    transition: 1s;
+}
+
+.accordion-block2:hover .cross{
+    transform: rotate(45deg);
+    transition: 1s;
+}
+
+.accordion-block3:hover .cross{
+    transform: rotate(45deg);
+    transition: 1s;
+}
+
+.accordion-block4:hover .cross{
+    transform: rotate(45deg);
+    transition: 1s;
+}
+
+.accordion-block:active .accordion-label{
+    color: rgb(228, 237, 46);
+}
